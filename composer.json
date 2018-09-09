@@ -1,0 +1,26 @@
+{
+	"name": "lsys/search",
+	"type" : "library",
+	"license": "Apache-2.0",
+	"version" : "1.0.0",
+	"description" : "lsys module search",
+	"autoload":{
+		"psr-4": {
+        	"LSYS\\" : "src/classes/LSYS/"
+		},
+		"files": ["src/Bootstarp.php"]
+    },
+     "require": {
+     	"php": ">=5.6",
+     	"lsys/config":"~1.0.0"
+	},
+     "require-dev": {
+		"lsys/search-sphinx" : "~1.0.0",
+		"lsys/search-sphinxrt" : "~1.0.0"
+	},
+	"suggest": {
+		"lsys/search-solr" : "~1.0.0",
+		"lsys/search-sphinx" : "~1.0.0",
+		"lsys/search-sphinxrt" : "~1.0.0"
+    }
+}

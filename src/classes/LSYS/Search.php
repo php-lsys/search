@@ -25,7 +25,7 @@ abstract class Search{
 	 * return search index
 	 * @return string
 	 */
-	public function get_index(){
+	public function getIndex(){
 		return $this->_index;
 	}
 	/**
@@ -46,18 +46,18 @@ abstract class Search{
 	 * @param string $pk
 	 * @param array $vals
 	 */
-	abstract public function update_index($pk,array $vals);
+	abstract public function updateIndex($pk,array $vals);
 	/**
 	 * delete pk form index
 	 * @param string $index
 	 * @param string $pk
 	 * @return bool
 	 */
-	abstract public function delete_index($pk);
+	abstract public function deleteIndex($pk);
 	/**
 	 * parse QueryExpr object
 	 * @param QueryExpr $expr
 	 * @return mixed
 	 */
-	abstract function parse_expr(QueryExpr $expr);
+	abstract function parseExpr(QueryExpr $expr);
 }

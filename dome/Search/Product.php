@@ -58,10 +58,10 @@ class Product extends Sphinx{
 		foreach ($where as $k=>$v){
 			switch ($k){
 				case self::WHERE_SHOP:
-					$this->_set_filter("id_shop",intval($v));
+					$this->_setFilter("id_shop",intval($v));
 					break;
 				case self::WHERE_CAT:
-					$this->_set_filter("id_product_cat",intval($v));
+					$this->_setFilter("id_product_cat",intval($v));
 					break;
 			}
 		}

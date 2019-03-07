@@ -29,14 +29,14 @@ class ORMReusltItem{
 	/**
 	 * proxy to result item
 	 */
-	public function get_pk(){
-		return $this->_item->get_pk();
+	public function getPk(){
+		return $this->_item->getPk();
 	}
 	/**
 	 * proxy to result item
 	 */
-	public function get_highlight($field){
-		return $this->_item->get_highlight($field);
+	public function getHighlight($field){
+		return $this->_item->getHighlight($field);
 	}
 	/**
 	 * proxy to result item
@@ -48,7 +48,7 @@ class ORMReusltItem{
 	 * get entity
 	 * @return Entity
 	 */
-	public function get_entity(){
+	public function getEntity(){
 		return $this->_entity;
 	}
 	/**

@@ -35,7 +35,7 @@ abstract class Result implements \Countable, \Iterator, \SeekableIterator{
 	 * get search query object
 	 * @return 
 	 */
-	public function get_query(){
+	public function getQuery(){
 		return $this->_query;
 	}
 	/**
@@ -123,11 +123,11 @@ abstract class Result implements \Countable, \Iterator, \SeekableIterator{
 	 /**
 	  * get search record total
 	  */
-	abstract public function get_total();
+	abstract public function getTotal();
 	/**
 	 * get search use time
 	 */
-	abstract public function get_time();
+	abstract public function getTime();
 	/**
 	 * @return ResultItem 
 	 */

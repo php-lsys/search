@@ -22,18 +22,18 @@ class ORMReuslt implements \Countable, \Iterator, \SeekableIterator{
 		$this->_orm=$orm;
 		$pks=[];
 		foreach ($result as $v){
-		    $pks[]=$v->get_pk();
+		    $pks[]=$v->getPk();
 		}
 		if (count($pks)>0){
-		    $this->_result=$this->_orm->reset()->where($this->_orm->primary_key(), "in", $pks)->find_all();
+		    $this->_result=$this->_orm->reset()->where($this->_orm->primaryKey(), "in", $pks)->findAll();
 		}
 	}
 	/**
 	 * proxy search result
 	 * @return Query
 	 */
-	public function get_query(){
-		return $this->_search_result->get_query();
+	public function getQuery(){
+		return $this->_search_result->getQuery();
 	}
 	/**
 	 * proxy search result
@@ -87,14 +87,14 @@ class ORMReuslt implements \Countable, \Iterator, \SeekableIterator{
 	/**
 	 * proxy search result
 	 */
-	public function get_total(){
-		return $this->_search_result->get_total();
+	public function getTotal(){
+		return $this->_search_result->getTotal();
 	}
 	/**
 	 * proxy search result
 	 */
-	public function get_time(){
-		return $this->_search_result->get_time();
+	public function getTime(){
+		return $this->_search_result->getTime();
 	}
 	/**
 	 * @return ORMReusltItem
@@ -104,7 +104,7 @@ class ORMReuslt implements \Countable, \Iterator, \SeekableIterator{
 		if ($current==null) return null;
 		if ($this->_result){
     		foreach ($this->_result as $v){
-    		    if($v->pk()==$current->get_pk()){
+    		    if($v->pk()==$current->getPk()){
     		        return new ORMReusltItem($current,$v);
     		    }
     		}

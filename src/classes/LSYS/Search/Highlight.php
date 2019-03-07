@@ -20,7 +20,7 @@ class Highlight{
 	 * @param array $fields
 	 */
 	public function __construct(array $fields){
-		$this->set_fields($fields);
+		$this->setFields($fields);
 	}
 	/**
 	 * 高亮前缀
@@ -37,27 +37,27 @@ class Highlight{
 	 * @var array
 	 */
 	protected $_highlight_fidlds=array();
-	public function set_before($tag){
+	public function setBefore($tag){
 		$this->_highlight_before=$tag;
 		return $this;
 	}
-	public function set_after($tag){
+	public function setAfter($tag){
 		$this->_highlight_after=$tag;
 		return $this;
 	}
-	public function set_field($field){
+	public function setField($field){
 		return $this->_highlight_fidlds[]=trim(strip_tags($field));
 	}
-	public function set_fields(array $fields){
+	public function setFields(array $fields){
 		return $this->_highlight_fidlds=$fields;
 	}
-	public function get_before(){
+	public function getBefore(){
 		return $this->_highlight_before;
 	}
-	public function get_after(){
+	public function getAfter(){
 		return $this->_highlight_after;
 	}
-	public function get_fields(){
+	public function getFields(){
 		return $this->_highlight_fidlds;
 	}
 }

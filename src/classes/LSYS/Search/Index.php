@@ -12,5 +12,5 @@ interface Index{
 	 * @param mixed $data
 	 * @return bool
 	 */
-	public function insert_index(array $record);
+	public function insertIndex(array $record);
 }

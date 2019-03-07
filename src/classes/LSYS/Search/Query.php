@@ -32,58 +32,58 @@ class Query{
 	 * is empty search
 	 * @return boolean
 	 */
-	public function empty_query(){
+	public function emptyQuery(){
 		if (empty($this->_key_word)) return true;
 		return false;
 	}
-	public function set_limit($limit){
+	public function setLimit($limit){
 		$limit=intval($limit);
 		$this->_limit=$limit<0?0:$limit;
 		return $this;
 	}
-	public function set_page($page,$limit=10){
+	public function setPage($page,$limit=10){
 		$page=$page<=0?1:intval($page);
 		$offset=($page-1)*$limit;
-		$this->set_limit($limit);
-		$this->set_offset($offset);
+		$this->setLimit($limit);
+		$this->setOffset($offset);
 		return $this;
 	}
-	public function set_offset($offset){
+	public function setOffset($offset){
 		$offset=intval($offset);
 		$this->_offset=$offset<0?0:$offset;
 		return $this;
 	}
-	public function set_where(array $where){
+	public function setWhere(array $where){
 		$this->_where=$where;
 		return $this;
 	}
-	public function set_sort($sort){
+	public function setSort($sort){
 		$this->_sort[]=$sort;
 		return $this;
 	}
-	public function set_highlight(Highlight $highlight){
+	public function setHighlight(Highlight $highlight){
 		$this->_highlight=$highlight;
 		return $this;
 	}
-	public function get_limit(){
+	public function getLimit(){
 		return $this->_limit;
 	}
-	public function get_offset(){
+	public function getOffset(){
 		return $this->_offset;
 	}
-	public function get_query(){
+	public function getQuery(){
 		return $this->_key_word;
 	}
-	public function get_where(){
+	public function getWhere(){
 		return $this->_where;
 	}
-	public function get_sort(){
+	public function getSort(){
 		return $this->_sort;
 	}
 	/**
 	 * @return Highlight
 	 */
-	public function get_highlight(){
+	public function getHighlight(){
 		return $this->_highlight;
 	}
 }

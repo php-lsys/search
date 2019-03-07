@@ -13,33 +13,33 @@ include "Search/PSearch.php";
 // //one
 $ps= new Product();
 $res=$ps->query(
-		Query::factory("ptitle")->set_page(1)
-		->set_highlight(
+		Query::factory("ptitle")->setPage(1)
+		->setHighlight(
 			Highlight::factory(array("title"))
 		)
 	);
 
-var_dump($res->get_total());
-var_dump($res->get_time());
+var_dump($res->getTotal());
+var_dump($res->getTime());
 
 $res = new ORMReuslt($res, new Active("product"));
 
 
 foreach ($res as $v){
-	var_dump($v->get_entity()->pk());
-	var_dump($v->get_entity()->as_array());
-	var_dump($v->get_highlight("title"));
+	var_dump($v->getEntity()->pk());
+	var_dump($v->getEntity()->asArray());
+	var_dump($v->getHighlight("title"));
 }
 
 
 // exit;
 //sphinxrt 适配时实时索引
 // $ps= new PSearch();
-// $ps->query(Query::factory("ptitle")->set_page(1)
-// 		->set_highlight(
+// $ps->query(Query::factory("ptitle")->setPage(1)
+// 		->setHighlight(
 //     			Highlight::factory(array("title"))
 //     		));
-$ps->insert_index(array(
+$ps->insertIndex(array(
 		'id'=>$pm->id_product,
 		'title'=>$pm->title,
 		'order_count'=>$pm->order_count,

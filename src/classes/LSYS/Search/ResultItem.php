@@ -24,9 +24,9 @@ abstract class ResultItem{
 		$this->_item=$item;
 	}
 	public function __toString(){
-		return $this->get_pk();
+		return $this->getPk();
 	}
-	abstract public function get_pk();
-	abstract public function get_highlight($field=null);
+	abstract public function getPk();
+	abstract public function getHighlight($field=null);
 	abstract public function get($field);
 }

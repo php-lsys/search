@@ -5,9 +5,9 @@
 
 > 默认未适配搜索引擎,可以使用以下依赖包:
 	
-	"lsys/search-solr" : "~1.0.0",
-	"lsys/search-sphinx" : "~1.0.0",
-	"lsys/search-sphinxrt" : "~1.0.0"
+	"lsys/search-solr" : "~2.0.0",
+	"lsys/search-sphinx" : "~2.0.0",
+	"lsys/search-sphinxrt" : "~2.0.0"
 
 
 

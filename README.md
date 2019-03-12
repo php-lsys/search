@@ -41,7 +41,7 @@ foreach ($res as $v){
 $res = new ORMReuslt($res, new Active("product"));
 foreach ($res as $v){
 	var_dump($v->get_entity()->pk());
-	var_dump($v->get_entity()->as_array());
+	var_dump($v->get_entity()->asArray());
 	var_dump($v->get_highlight("title"));
 }
 ```

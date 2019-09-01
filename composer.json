@@ -6,21 +6,25 @@
 	"description" : "lsys module search",
 	"autoload":{
 		"psr-4": {
-        	"LSYS\\" : "src/classes/LSYS/"
+        	"LSYS\\" : [
+				"src/common/classes/LSYS/",
+				"src/driver-solr/classes/LSYS/",
+				"src/driver-sphinx/classes/LSYS/",
+				"src/driver-sphinxrt/classes/LSYS/"
+			]
 		},
-		"files": ["src/Bootstarp.php"]
+		"files": ["src/common/Bootstarp.php"]
     },
      "require": {
      	"php": ">=5.6",
      	"lsys/config":"~2.1.0"
 	},
      "require-dev": {
-		"lsys/search-sphinx" : "~2.1.0",
-		"lsys/search-sphinxrt" : "~2.1.0"
+		"lsys/sphinxclient" : "~2.1.0",
+		 "foolz/sphinxql-query-builder" : "^1.2.0"
 	},
 	"suggest": {
-		"lsys/search-solr" : "~2.1.0",
-		"lsys/search-sphinx" : "~2.1.0",
-		"lsys/search-sphinxrt" : "~2.1.0"
+		"foolz/sphinxql-query-builder" : "^1.2.0 on driver-sphinx",
+		"ext-solr" : "* on driver-solr"
     }
 }

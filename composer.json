@@ -2,7 +2,6 @@
 	"name": "lsys/search",
 	"type" : "library",
 	"license": "Apache-2.0",
-
 	"description" : "lsys module search",
 	"autoload":{
 		"psr-4": {
@@ -20,7 +19,7 @@
 	},
      "require-dev": {
 		"lsys/sphinxclient" : "~2.1.0",
-		 "foolz/sphinxql-query-builder" : "^1.2.0"
+		"foolz/sphinxql-query-builder" : "^1.2.0"
 	},
 	"suggest": {
 		"foolz/sphinxql-query-builder" : "^1.2.0 on driver-sphinx",

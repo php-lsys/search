@@ -3,14 +3,6 @@
 > 目的在于在开发业务需求时不要关系底层搜索的实现,方便在业务变更时快速切换底层搜索引擎而无需修改代码
 
 
-> 默认未适配搜索引擎,可以使用以下依赖包:
-	
-	"lsys/search-solr" : "~2.0.0",
-	"lsys/search-sphinx" : "~2.0.0",
-	"lsys/search-sphinxrt" : "~2.0.0"
-
-
-
 示例代码:
 ```
 //关于 product 参考:dome/Search/Product.php

@@ -15,10 +15,10 @@
 		"files": ["src/common/Bootstarp.php"]
     },
      "require": {
-     	"lsys/config":"~0.0.0"
+     	"lsys/config":"~0.0.1"
 	},
      "require-dev": {
-		"lsys/sphinxclient" : "~0.0.0",
+		"lsys/sphinxclient" : "~0.0.1",
 		"foolz/sphinxql-query-builder" : "^1.2.0"
 	},
 	"suggest": {

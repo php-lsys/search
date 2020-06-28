@@ -25,8 +25,8 @@ abstract class Search{
 	 * return search index
 	 * @return string
 	 */
-	public function getIndex(){
-		return $this->_index;
+	public function getIndex():string{
+	    return strval($this->_index);
 	}
 	/**
 	 * @param array $where
@@ -46,14 +46,14 @@ abstract class Search{
 	 * @param string $pk
 	 * @param array $vals
 	 */
-	abstract public function updateIndex($pk,array $vals);
+	abstract public function updateIndex(string $pk,array $vals);
 	/**
 	 * delete pk form index
 	 * @param string $index
 	 * @param string $pk
 	 * @return bool
 	 */
-	abstract public function deleteIndex($pk);
+	abstract public function deleteIndex(string $pk);
 	/**
 	 * parse QueryExpr object
 	 * @param QueryExpr $expr

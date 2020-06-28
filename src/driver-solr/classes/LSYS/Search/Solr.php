@@ -76,7 +76,7 @@ abstract class Solr extends Search implements Index{
 	 * {@inheritDoc}
 	 * @see Search::setAttr()
 	 */
-	public function updateIndex($pk,array $vals){
+	public function updateIndex(string $pk,array $vals){
 		throw new \Exception("not support");
 	}
 	
@@ -111,7 +111,7 @@ abstract class Solr extends Search implements Index{
 	 * {@inheritDoc}
 	 * @see Search::del()
 	 */
-	public function deleteIndex($pk){
+	public function deleteIndex(string $pk){
 	    throw new \Exception("not support");
 	}
 	

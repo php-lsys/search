@@ -125,7 +125,7 @@ abstract class SphinxRT extends Search implements Index{
 	 * {@inheritDoc}
 	 * @see Search::setAttr()
 	 */
-	public function updateIndex($pk,array $vals){
+	public function updateIndex(string $pk,array $vals){
 		return $result = SphinxQL::create(self::$_connection)
 		->update($this->_index)
 		->where('id','=',$pk)
@@ -137,7 +137,7 @@ abstract class SphinxRT extends Search implements Index{
 	 * {@inheritDoc}
 	 * @see Search::deleteIndex()
 	 */
-	public function deleteIndex($pk){
+	public function deleteIndex(string $pk){
 		return SphinxQL::create(self::$_connection)->delete()
 			->from($this->_index)
 			->where('id', '=', intval($pk))
@@ -200,7 +200,7 @@ abstract class SphinxRT extends Search implements Index{
 	 * @param string $path
 	 * @return string
 	 */
-	public function toIndexConf($path='/var/lib/sphinxsearch/data/'){
+	public function toIndexConf(string $path='/var/lib/sphinxsearch/data/'){
 		$field=array();
 		$fkey=array_values($this->_map_columns);
 		foreach ($this->_index_columns as $k=>$v){

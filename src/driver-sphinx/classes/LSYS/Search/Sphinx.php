@@ -81,7 +81,7 @@ abstract class Sphinx extends Search {
 	 * {@inheritDoc}
 	 * @see Search::setAttr()
 	 */
-	public function updateIndex($pk,array $vals){
+	public function updateIndex(string $pk,array $vals){
 		if (!$pk)return true;
 		$field=array();
 		$val=array();
@@ -96,7 +96,7 @@ abstract class Sphinx extends Search {
 	 * {@inheritDoc}
 	 * @see Search::del()
 	 */
-	public function deleteIndex($pk){
+	public function deleteIndex(string $pk){
 		if (!$pk)return true;
 		$s=self::$_sphinx;
 		return $s->UpdateAttributes ( $this->_index, array('is_deleted'), array($pk=>array(1)) );
